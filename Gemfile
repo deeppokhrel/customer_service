@@ -19,7 +19,9 @@ gem "tzinfo-data"
 gem "solid_cache"
 gem "solid_queue"
 gem "solid_cable"
-gem 'drb', '< 2.2.0'
+gem "drb", "< 2.2.0"
+gem "jwt"
+gem "dotenv-rails"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -46,4 +48,5 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+  gem "pry"
 end
