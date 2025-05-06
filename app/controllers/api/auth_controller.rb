@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# // Skipping for now
 class Api::AuthController < ApplicationController
   before_action :validate_auth_token
   skip_before_action :validate_token, only: :login
