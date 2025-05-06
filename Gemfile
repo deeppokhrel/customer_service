@@ -22,6 +22,7 @@ gem "solid_cable"
 gem "drb", "< 2.2.0"
 gem "jwt"
 gem "dotenv-rails"
+gem "ruby-kafka"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
