@@ -2,8 +2,8 @@
 
 # // Skipping for now
 class Api::AuthController < ApplicationController
-  before_action :validate_auth_token
-  skip_before_action :validate_token, only: :login
+  # before_action :validate_auth_token
+  # skip_before_action :validate_token, only: :login
 
   # POST /api/auth/login
   def login
