@@ -40,6 +40,14 @@ jobs:
       run: |
         bundle install
 
+    - name: create db
+      run: |
+        rails db:create
+
+    - name: migrate db
+      run: |
+        rails db:migrate
+
     - name: Run tests
       env:
         KAFKA_BROKERS: localhost:9092
