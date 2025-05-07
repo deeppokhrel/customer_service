@@ -17,8 +17,13 @@ RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
+  # config.before(:each) do
+  #   allow_any_instance_of(Kafka::Producer).to receive(:deliver_message).and_return(true)
+  # end
+
   config.before(:each) do
-    allow_any_instance_of(Kafka::Producer).to receive(:deliver_message).and_return(true)
+    kafka_double = instance_double(Kafka::Client, deliver_message: true)
+    allow(Kafka).to receive(:new).and_return(kafka_double)
   end
 
   config.expect_with :rspec do |expectations|
